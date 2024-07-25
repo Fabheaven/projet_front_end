@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --primary: #022741;
+  --gray: #6c757d;
+
+}
+
+body{
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  color: #333;
+  background-color: #f8f8f8;
+}
+
+header{
+  color: #fff;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+header .title-logo{
+  padding: 26px;
+  margin-top: -41px;
+}
+
+nav{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  background-color: rgba(2, 39, 65, 0.8);
+  padding: 23px;
+}
+
+.subtabs{
+  display: none;
+}
+
+nav li:hover .subtabs{
+  display: inline-block;
+  position: absolute;
+  top: 100%;
+  padding: opx;
+  z-index: 1000;
+}
+
+h1{
+  color: white;
+}
+
+nav ul{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li{
+  display: inline;
+  margin: 0 7px;
+}
+
+nav ul li a{
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  font-size: .625rem;
+  letter-spacing: 0.15rem;
+  padding-left: 1.5em;
+}
+
+nav .tabs-menu > li > a::before{
+  content: "\2022"; /* Caractère pour le point (puce) */
+  font-size: 1.2em; /* Taille du point */
+  color:grey; /* Couleur du point */
+  position: absolute;
+  left: 0; /* Position du point à gauche */
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: none;
+}
+
+header .langage-container{
+  position: relative;
+  font-size: 12px;
+  background-color: transparent;
+  color: white;
+  cursor: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  top: 17px;
+  left: -668px;
+}
+
+header .custom-button-container{
+  position: absolute;
+  text-align: center;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: flex-end;
+  margin: 0;
+  padding: 0;
+  top: 69px;
+  right: 57px;
+}
+
+header .custom-button:hover{
+  background-color: white;
+  color: var(--primary);
+}
+
+header .custom-button-2:hover{
+  background-color: rgba(255, 255, 255, 0.677);
+  color: var(--primary);
+}
+
+header .custom-button{
+  margin-bottom: 3px;
+  padding: 5px 20px;
+  font-size: 12px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+  transition: background-color 0.3s color 0.3s;
+}
+
+header .custom-button-2{
+  display: inline-block;
+  padding: 1px 20px;
+  font-size: .625rem;
+  background-color: white;
+  color: var(--primary);
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.carousel{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.carousel-video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+.carousel-video.active{
+  display: block;
+}
+
+.controls{
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.controls button{
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+main{
+  padding: 20px;
+  text-align: center;
+}
+
+main section{
+  margin: 20px 0;
+}
+
+
+footer{
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
