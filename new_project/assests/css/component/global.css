@@ -1,13 +1,56 @@
-* {
-  margin: 0;
-  padding: 0;
+*, 
+*::before, 
+*::after {
+  margin:0;
+  padding:0;
   box-sizing: border-box;
+  outline: none;
 }
 
 :root{
+  --content-width: 1189.7px;
   --primary: #022741;
   --gray: #6c757d;
 
+}
+
+#app-container {
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+/*
+  conteneur structurel
+  etablissant la zone de contenu
+*/
+.container-struct {
+  width: var(--content-width);
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/*
+  conteneur en ligne pleine largeur 100%
+*/
+.container-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+/*
+  conteneur colonne pleine largeur 100%
+*/
+.container-col {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 body{
